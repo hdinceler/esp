@@ -1,4 +1,9 @@
+//Wifi.h:
+#pragma once
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
-void wifi_baslat(const char* ssid, const char* password);
-bool wifi_baglandi_mi();    
+#include "../Ayar.h"
+
+void wifi_baslat();
+void wifi_kontrol();
+bool wifi_baglandi();

@@ -1,5 +1,5 @@
-//serial:cpp:
-#include "serial.h"
+//Serial:cpp:
+#include "Serial.h"
 
 void seriali_baslat() {
     Serial.begin(SERIAL_BAUD);

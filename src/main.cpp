@@ -1,15 +1,19 @@
 //main.cpp:
 #pragma once
 #include "Ayar.h"
-#include "serial/serial.h"
+#include "Serial/Serial.h"
 #include "Internet/Wifi.h"
+#include "Internet/Mqtt.h"
+#include "Cikis/Sensorler/Taklid.h"
 
 void setup() {
 seriali_baslat();
-wifi_baslat(  WIFI_SSID, WIFI_PASSWORD  );
+wifi_baslat();
+mqtt_baslat();
 }
 
 void loop(){
-  //  char gelen_veri = seriali_oku();
-    
+      wifi_kontrol();
+      mqtt_dongu();
+      taklid_gonder();
 }

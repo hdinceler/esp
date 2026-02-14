@@ -1,4 +1,4 @@
-//serial.h:
+//Serial.h:
 #pragma once
 #include "../Ayar.h"
 
