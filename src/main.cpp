@@ -1,7 +1,8 @@
 //main.cpp:
+#pragma once
 #include "Ayar.h"
 #include "serial/serial.h"
-#include "Wifi/Wifi.h"
+#include "Internet/Wifi.h"
 
 void setup() {
 seriali_baslat();
