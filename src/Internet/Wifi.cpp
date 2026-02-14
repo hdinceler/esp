@@ -1,4 +1,4 @@
-#include "Wifi/Wifi.h"
+#include "Internet/Wifi.h"
 
 void wifi_baslat(const char* ssid, const char* password) {
     WiFi.begin(ssid, password);
