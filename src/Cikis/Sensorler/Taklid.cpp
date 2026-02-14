@@ -4,7 +4,7 @@ void taklid_baslat() {
     Serial.println("Taklid sensör başlatıldı");
 }
 
-float nem_oku(){
+uint8_t nem_oku(){
     return random(30, 80); // Örnek: 30 ile 80 arasında rastgele bir nem değeri döndür
 }
 float sicaklik_oku(){

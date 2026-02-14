@@ -7,7 +7,7 @@
 #include "../../Internet/Mqtt.h"
 
 void taklid_baslat();
-float nem_oku();
+uint8_t nem_oku();
 float sicaklik_oku();
 uint16_t mq9_oku();
 uint8_t roleleri_oku();
