@@ -2,7 +2,7 @@
 #include "serial.h"
 
 void seriali_baslat() {
-    Serial.begin(115200);
+    Serial.begin(SERIAL_BAUD);
     Serial.println("Serial başladı");
 }
 
