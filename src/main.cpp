@@ -1,9 +1,9 @@
-#include <Arduino.h>
+//main.cpp:
+#include "serial/serial.h"
 
 
 void setup() {
- Serial.begin(115200);
- Serial.println("Serial Başladı");
+seriali_baslat();
 }
 
 void loop(){}
