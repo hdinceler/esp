@@ -6,4 +6,10 @@ void setup() {
 seriali_baslat();
 }
 
-void loop(){}
+void loop(){
+   char gelen_veri = seriali_oku();
+   if (gelen_veri != '\0') {
+      Serial.print("Gelen veri: ");
+      Serial.println(gelen_veri);
+   }
+}
