@@ -60,7 +60,7 @@ void mqtt_dongu() {
         Serial.println("MQTT'ye baglanildi!");
 
         mqttClient.subscribe(MQTT_TOPIC_ROLE);
-        mqttClient.subscribe(MQTT_TOPIC_ESP_DURUM);
+        // mqttClient.subscribe(MQTT_TOPIC_ESP_DURUM);
     }
 
     mqttClient.loop();

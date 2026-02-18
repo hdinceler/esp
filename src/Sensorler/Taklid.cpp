@@ -18,16 +18,22 @@ uint16_t mq9_oku(){
  
 
 
-String taklid_veri_uret() {
-    String json_verisi = "{";
-    json_verisi += "\"n\": " + String(nem_oku()) + ",";
-    json_verisi += "\"s\": " + String(sicaklik_oku()) + ",";
-    json_verisi += "\"mq9\": " + String(mq9_oku()) + ",";
-    json_verisi += "\"r\": " + String(roleleri_oku());
-    json_verisi += "}"; 
-    
-    return json_verisi;
-    }
+String taklid_veri_uret()
+{
+    int16_t sicaklik10 = (int16_t)(sicaklik_oku() * 10.0f); // 18.3 → 183
+    uint8_t nem        = nem_oku();
+    uint16_t mq9       = mq9_oku();
+    uint8_t roleMask   = roleleri_oku();
+
+    String json = "{";
+    json += "\"n\":"   + String(nem)        + ",";
+    json += "\"s\":"   + String(sicaklik10) + ",";
+    json += "\"mq9\":" + String(mq9)        + ",";
+    json += "\"r\":"   + String(roleMask);
+    json += "}";
+
+    return json;
+}
 
 void taklid_gonder() {
     static unsigned long onceki_zaman = 0;

@@ -40,10 +40,19 @@
 #define BUZZER_PIN D0   // GPIO16
 
 // ================= DHT11 ====================
+///DHT hattında 4.7k–10k pull-up olmalı (dahili yoksa)
 #define DHT_PIN  D4     // GPIO2
 #define DHT_TIP  DHT11
 
 #endif // AYARLAR_H
+
+// ================= MQ9 =====================
+#define MQ9_PIN A0
+// dahili gerilim bölücü yoksa
+// MQ9 AO ---- 220kΩ ----+
+//                       +---- A0
+// GND  ---- 100kΩ ------+
+
 
 // ================= RÖLE ======================
 // NodeMCU 0.9 (ESP8266) BOOT-SAFE pinler
