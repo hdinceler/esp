@@ -1,7 +1,6 @@
 //Wifi.h:
-
 #include "Internet/Wifi.h"
- void wifi_baslat(){
+void wifi_baslat(){
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
     Serial.print("WiFi'ye bağlanılıyor");
     while (WiFi.status() != WL_CONNECTED) {

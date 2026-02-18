@@ -4,10 +4,12 @@
 #include "Serial/Serial.h"
 #include "Internet/Wifi.h"
 #include "Internet/Mqtt.h"
+#include "Role/Role.h"
 #include "Cikis/Sensorler/Taklid.h"
 
 void setup() {
 seriali_baslat();
+role_baslat();
 wifi_baslat();
 mqtt_baslat();
 }
