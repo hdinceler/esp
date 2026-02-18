@@ -18,5 +18,13 @@ taklid_baslat();
 void loop(){
      wifi_kontrol();    
      mqtt_dongu(); 
-     taklid_gonder();
+     String taklid_veri=taklid_veri_uret();
+     if( mqtt_yolla(MQTT_TOPIC_SENSOR,taklid_veri) ){
+         Serial.println("Taklid veri gonderildi:");
+         Serial.println(taklid_veri);
+     } else {
+         Serial.println("MQTT gonderim basarisiz");
+     }
+     delay(1000); // 1 saniye bekle
+
 }

@@ -19,9 +19,9 @@
 #define MQTT_SERVER "haysaf.com"
 #define MQTT_PORT   1883
 
-#define MQTT_TOPIC_ROLE       "ev/roleler"
-#define MQTT_TOPIC_SENSOR     "ev/sensorler"
-#define MQTT_TOPIC_ESP_DURUM  "ev/esp_durum"
+#define MQTT_TOPIC_ROLE       "role"
+#define MQTT_TOPIC_SENSOR     "sensor"
+#define MQTT_TOPIC_ESP_DURUM  "esp"
 
 // ================= SERIAL ====================
 #define SERIAL_BAUD 115200
@@ -52,6 +52,9 @@
 // MQ9 AO ---- 220kΩ ----+
 //                       +---- A0
 // GND  ---- 100kΩ ------+
+#define MQ_SINIR_UYGUN 300
+#define MQ_SINIR_KRITIK 500
+#define MQ_SINIR_TEHLIKELI 700
 
 
 // ================= RÖLE ======================

@@ -28,8 +28,8 @@ String taklid_veri_uret()
     String json = "{";
     json += "\"n\":"   + String(nem)        + ",";
     json += "\"s\":"   + String(sicaklik10) + ",";
-    json += "\"mq9\":" + String(mq9)        + ",";
-    json += "\"r\":"   + String(roleMask);
+    json += "\"mq9\":" + String(mq9)        ;
+    // json += "\"r\":"   + String(roleMask);
     json += "}";
 
     return json;
@@ -45,7 +45,7 @@ void taklid_gonder() {
 
     String veri = taklid_veri_uret();
 
-    if (mqtt_yolla(veri)) {
+    if (mqtt_yolla(MQTT_TOPIC_SENSOR,veri)) {
         Serial.println("Taklit veri gonderildi:");
         Serial.println(veri);
     } else {

@@ -11,7 +11,7 @@
 void mqtt_baslat();
 void mqtt_dongu();
 bool mqtt_baglandi();
-bool mqtt_yolla(const String& veri);
+bool mqtt_yolla(const char* topic, const String& veri) ;
 
 // ===== JSON API =====
 bool mqtt_json_var_mi();

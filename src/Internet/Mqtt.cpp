@@ -10,10 +10,10 @@ static bool json_hazir = false;
 // ===== MQTT CALLBACK =====
 void mqtt_callback(char* topic, byte* payload, unsigned int length)
 {
-    payload[length] = '\0'; // string sonlandır
+    // payload[length] = '\0'; // string sonlandır
 
     DeserializationError err =
-        deserializeJson(gelen_json, (char*)payload);
+        deserializeJson(gelen_json, payload,length);
 
     if (err) {
         Serial.println("JSON parse hatasi!");
@@ -72,11 +72,9 @@ bool mqtt_baglandi() {
 }
 
 // ===== GONDER =====
-bool mqtt_yolla(const String& veri) {
-    if (mqtt_baglandi()) {
-        return mqttClient.publish(MQTT_TOPIC_ESP_DURUM, veri.c_str());
-    }
-    return false;
+bool mqtt_yolla(const char* topic, const String& veri) {
+    if (!mqtt_baglandi()) return false;
+    return mqttClient.publish(topic, veri.c_str());
 }
 
 // ===== JSON OKUMA API =====
