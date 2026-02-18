@@ -3,5 +3,5 @@
 #include "../Ayar.h"
 
 #include <Arduino.h>
-void seriali_baslat();   // fonksiyonudan haberdar et
-char seriali_oku();    // fonksiyonudan haberdar et
+void serial_baslat();   // fonksiyonudan haberdar et
+char serial_oku();    // fonksiyonudan haberdar et

@@ -1,12 +1,12 @@
 //Serial:cpp:
 #include "Serial.h"
 
-void seriali_baslat() {
+void serial_baslat() {
     Serial.begin(SERIAL_BAUD);
     Serial.println("Serial başladı");
 }
 
-char seriali_oku() {
+char serial_oku() {
     if (Serial.available() > 0) {
         int data = Serial.read(); // Tek karakter oku
         return (char)data;        // int → char dönüşümü

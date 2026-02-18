@@ -1,0 +1,17 @@
+[
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "PIO: Build"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "workbench.action.tasks.runTask",
+    "args": "PIO: Upload"
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "workbench.action.tasks.runTask",
+    "args": "PIO: Serial Monitor"
+  }
+]

@@ -1,10 +1,10 @@
 //Taklid.h:
 #pragma once
-#include "../../Ayar.h"
+#include "../Ayar.h"
 #include <Arduino.h>
-#include "../../Serial/Serial.h"
-#include "../../Internet/Wifi.h"
-#include "../../Internet/Mqtt.h"
+#include "../Serial/Serial.h"
+#include "../Internet/Wifi.h"
+#include "../Internet/Mqtt.h"
 
 void taklid_baslat();
 uint8_t nem_oku();

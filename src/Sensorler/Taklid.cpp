@@ -15,26 +15,15 @@ uint16_t mq9_oku(){
     return random(200, 800); // Örnek: 200 ile 800 arasında rastgele bir MQ-9 gaz sensör değeri döndür
 }
 
-uint8_t roleleri_oku(){
-    uint8_t role_maskesi= 0;
-
-    for(uint8_t i=0; i<ROLE_SAYISI; i++){
-        bool role_durumu= random(0, 2); 
-    
-        if(role_durumu){
-            role_maskesi |= (1 << i); // İlgili biti 1 yap
-        }   
-    }
-    return role_maskesi;
-}
+ 
 
 
 String taklid_veri_uret() {
     String json_verisi = "{";
-    json_verisi += "\"nem\": " + String(nem_oku()) + ",";
-    json_verisi += "\"sicaklik\": " + String(sicaklik_oku()) + ",";
+    json_verisi += "\"n\": " + String(nem_oku()) + ",";
+    json_verisi += "\"s\": " + String(sicaklik_oku()) + ",";
     json_verisi += "\"mq9\": " + String(mq9_oku()) + ",";
-    json_verisi += "\"roleler\": " + String(roleleri_oku());
+    json_verisi += "\"r\": " + String(roleleri_oku());
     json_verisi += "}"; 
     
     return json_verisi;

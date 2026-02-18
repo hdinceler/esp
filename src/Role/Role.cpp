@@ -25,7 +25,7 @@ void role_baslat() {
 }
 
 
-void role_maskesi_uyugla(uint8_t mask) {
+void role_maskesi_uygula(uint8_t mask) {
     role_maskesi = mask;
 
     for (uint8_t i = 0; i < ROLE_SAYISI; i++) {
@@ -42,9 +42,33 @@ uint8_t role_maskesi_getir() {
 }
 
 void role_hepsini_ac() {
-    role_maskesi_uyugla((1 << ROLE_SAYISI) - 1);
+    role_maskesi_uygula((1 << ROLE_SAYISI) - 1);
 }
 
 void role_hepsini_kapat() {
-    role_maskesi_uyugla(0x00);
+    role_maskesi_uygula(0x00);
+}
+
+//donanım seviyesinde gerçek röle okuma fonksiyonu
+uint8_t roleleri_oku()
+{
+    uint8_t mask = 0x00;
+
+    for (uint8_t i = 0; i < ROLE_SAYISI; i++) {
+        uint8_t seviye = digitalRead(role_pinleri[i]);
+
+        bool acik;
+        if (ROLE_AKTIF_LOW) {
+            acik = (seviye == LOW);
+        } else {
+            acik = (seviye == HIGH);
+        }
+
+        if (acik) {
+            mask |= (1 << i);
+        }
+    }
+
+    role_maskesi = mask; // yazılımla senkronla
+    return mask;
 }
