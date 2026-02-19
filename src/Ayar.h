@@ -11,6 +11,8 @@
 #define SERIAL_DONGU_INTERVAL            500   // 0.5 sn
 #define TAKLIT_GONDER_INTERVAL          1000   // 1 sn
 
+#define SENSOR_OKUMA_INTERVAL          1000   // 1 sn
+
 // ================= WIFI ======================
 #define WIFI_SSID     "zone-linux"
 #define WIFI_PASSWORD "Strangula57+"
@@ -22,6 +24,8 @@
 #define MQTT_TOPIC_ROLE       "role"
 #define MQTT_TOPIC_SENSOR     "sensor"
 #define MQTT_TOPIC_ESP_DURUM  "esp"
+#define MQTT_TOPIC_GAZ_DURUM  "gaz_durum"
+#define MQTT_TOPIC_SUNUCU_KOMUT "sunucu_komut"
 
 // ================= SERIAL ====================
 #define SERIAL_BAUD 115200
