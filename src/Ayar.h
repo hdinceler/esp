@@ -15,7 +15,7 @@
 
 // ================= WIFI ======================
 #define WIFI_SSID     "zone-linux"
-#define WIFI_PASSWORD "Strangula57+"
+#define WIFI_PASSWORD "abc12345"
 
 // ================= MQTT ======================
 #define MQTT_SERVER "haysaf.com"
