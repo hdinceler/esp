@@ -14,8 +14,8 @@
 #define SENSOR_OKUMA_INTERVAL          1000   // 1 sn
 
 // ================= WIFI ======================
-#define WIFI_SSID     "zone-linux"
-#define WIFI_PASSWORD "abc12345"
+#define WIFI_SSID     "TOKI"
+#define WIFI_PASSWORD "28186980"
 
 // ================= MQTT ======================
 #define MQTT_SERVER "haysaf.com"
@@ -69,3 +69,5 @@
 
 // Röle aktif LOW ise true yap
 #define ROLE_AKTIF_LOW true
+// ===============lcd=============
+
